@@ -40,6 +40,9 @@ All submitted details will be handled securely and used only for purposes relate
 <div class="cta-block">
   <p>Ready to join us? Use the link below to complete your symposium registration.</p>
   <a class="button" href="{{ site.symposium_registration_url }}" target="_blank" rel="noopener">Open registration form</a>
+  {% if site.symposium_abstract_url and site.symposium_abstract_url != '' %}
+  <a class="button button--secondary" href="{{ site.symposium_abstract_url }}" target="_blank" rel="noopener">Submit an abstract</a>
+  {% endif %}
 </div>
 {% else %}
 <div class="empty-state">

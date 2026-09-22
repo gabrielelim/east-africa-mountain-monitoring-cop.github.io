@@ -16,8 +16,15 @@ Use this page for the call for abstracts, themes, submission deadline, abstract 
 
 A structured web form is recommended instead of document uploads. Suggested fields include title, corresponding author, affiliation, co-authors, abstract text, keywords, topic/session and oral/poster preference.
 
+
 {% if site.symposium_abstract_url and site.symposium_abstract_url != '' %}
-<a class="button" href="{{ site.symposium_abstract_url }}">Submit an abstract</a>
+<div class="cta-block">
+  <p>Ready to share your work? Use the link below to submit your abstract.</p>
+  <a class="button" href="{{ site.symposium_abstract_url }}" target="_blank" rel="noopener">Submit an abstract</a>
+  {% if site.symposium_registration_url and site.symposium_registration_url != '' %}
+  <a class="button button--secondary" href="{{ site.symposium_registration_url }}" target="_blank" rel="noopener">Register for the symposium</a>
+  {% endif %}
+</div>
 {% else %}
 <div class="empty-state">
   <strong>Abstract submission is not open yet.</strong>
